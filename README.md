@@ -4,11 +4,12 @@ A Fallout 4 Mod. Includes ammo switching, additional ammo types, a weapon condit
 
 -------------------------------------------------------------------------------------------------------
 
-*Notice*: This mod will be replaced by WeaponTweaks (link) when it's ready and will not be receiving any more major updates.
+Also available on ModDB: https://www.moddb.com/mods/ammotweaks
 
 -------------------------------------------------------------------------------------------------------
 
 ## Warnings
+- This mod will be replaced by WeaponTweaks (no link yet) when it's ready and will not be receiving any more major updates.
 - As of release 1.1, the master file is an esp to make it easier to upload it to Bethesda.net.
 	- This means you'll need to remove any previous versions before installing this one.
 - This mod uses a lot of scripts.
@@ -39,16 +40,9 @@ A Fallout 4 Mod. Includes ammo switching, additional ammo types, a weapon condit
 - Assign the [Swap Ammo] item to a hotkey/quickslot.
 - Using the [Swap Ammo] item will cycle your weapon to the next ammo type (regardless of the amount of corresponding ammo you have)
 - the [Swap Ammo Alt] item is for unique weapons that refuse to work with the [Swap Ammo] item.
-
 -------------------------------------------------------------------------------------------------------
 
-## Optional Enhancements
-- The HUD widget for displaying ammo type and weapon condition requires HUDFramework by registrator2000 (link).
-	- AmmoTweaks can work without it, but I consider the widget essential.
-- Can be configured with MCM (link).
 
-
--------------------------------------------------------------------------------------------------------
 ## Features
 -------------------------------------------------------------------------------------------------------
 ## Ammo/Attack Types
@@ -64,20 +58,31 @@ A Fallout 4 Mod. Includes ammo switching, additional ammo types, a weapon condit
 - Weapon Workbenches can be used to repair them or improve them beyond 100%.
 - Different ammo and attack types degrade weapons at different rates. 
 	- Crafting perks also affect the amount of condition subtracted per shot. (-5% per rank of Gun Nut, Science!, or Blacksmith)
-- When a weapon's condition reaches 0, it is autmatically unequipped and cannot be re-equipped until it is repaired. 
+- When a weapon's condition reaches 0, it is automatically unequipped and cannot be re-equipped until it is repaired. 
 	- An option to destroy them when broken exists in the holotape.
 - Effects:
-	- Ballistic weapons and launchers lose range and value, and gain recoil as they deterioate.
+	- Ballistic weapons and launchers lose range and value, and gain recoil as they deteriorate.
 	- Energy weapons lose damage, ammo capacity, range, and value, and gain recoil.
 	- Melee weapons lose damage and value.
+-------------------------------------------------------------------------------------------------------
+## HUD Widget for Ammo Type and Condition (automatically enabled, can be toggled on/off)
+- Requires HUDFramework by registrator2000, I've been able to add a hud display.
+- This mod will automatically detect if HUDFramework is installed and switch from displaying things as messages to a condition bar/icon and a text display for Ammo Types if found.
+- Condition can be displayed as either a bar or an icon that changes color.
+- The bar is designed to fit with the style of the standard HUD.
 -------------------------------------------------------------------------------------------------------
 ## Weapon SPECIAL Restrictions (optional)
 - Larger weapons require Strength to equip, and energy weapons require Intelligence.
 -------------------------------------------------------------------------------------------------------
-## Projectile Tweaks
+## Projectile and Visual Tweaks
 - Ballistic projectiles now have velocity and are influenced by gravity.
 - Velocity is based on actual statistics derived from muzzle velocity and force (and converted to Fallout's units). 
-	- Gravity is not, so bullet drop is probably not accurate (but it's there! :D )
+	- Gravity is not, so bullet drop is probably not accurate.
+- Projectiles use a performance-friendly glowing sprite when not in VATS.
+- There are no tracers, but projectiles are still visible (just very fast and small in some cases).
+- Added several resized muzzle flashes.
+- Frag and missile explosions have a higher radius. Plasma and Pulse explosions create appropriately colored light.
+- Mines and grenades can explode when damaged.
 -------------------------------------------------------------------------------------------------------
 ## Ammo/Explosives Crafting
 - An ammo crafting system using the standard crafting bench menus is included. 
@@ -91,37 +96,24 @@ A Fallout 4 Mod. Includes ammo switching, additional ammo types, a weapon condit
 - Casings, drained cells and primers can not be crafted.
 - Casings can be obtained by firing weapons or buying Ammo Boxes. 
 - The chance to obtain casings per shot is affected by the ammo type, your Luck and Agility.
+- Shipment items have also been added for the new components and can be distributed to vendor leveled lists.
 -------------------------------------------------------------------------------------------------------
-## Visual Tweaks
-- Projectiles use a performance-friendly glowing sprite when not in VATS.
-- There are no tracers, but projectiles are still visible (just very fast and small in some cases).
-- Added several resized muzzle flashes.
-- Frag and missile explosions have a higher radius. Plasma and Pulse explosions create appropriately colored light.
--------------------------------------------------------------------------------------------------------
-## Throwing Weapons (distribution can be disabled during initial setup)
-- Added several thrown weapons inspired by the older games and unused thrown weapons from Far Harbor (if installed)
-	- Dynamite Stick, Throwing Knife, Rock, Baseball, Flare
-	- Far Harbor restored throwing weapons (requires DLC): Saw Blade, Harpoon, Electrified Harpoon, Explosive Harpoon, Switchblade
--------------------------------------------------------------------------------------------------------
-## Ammo and Item Distribution (can be disabled during initial setup)
-- Shipment items have been added for the new components.
-- Bulk Ammo Box items have been added to vendors. 
-	- An option is also available that will let you craft them for free.
-	- These boxes contain 50 rounds of the labeled caliber. Random chance will affect the amount of special rounds and casings obtained instead of standard rounds.
-- Most ammo in Loot and vendor lists is affected by the chance options in the configuration holotape (Full or modular LeveledLists esp only).
-- If DLCs are found, their ammo and weapons can be optionally distributed to the Commonwealth (via script).
+## Thrown Weapons (distribution can be disabled during initial setup)
+- Added items: Dynamite Stick, Throwing Knife, Rock, Baseball, Flare
+- Restored Far Harbor throwing weapons (requires DLC): Saw Blade, Harpoon, Electrified Harpoon, Explosive Harpoon, Switchblade
 -------------------------------------------------------------------------------------------------------
 ## Unique Weapons for Followers
 - Follower weapons have been tweaked to use standard ammunition and be usable by the player.
 - Each follower's weapon has a unique name based on unique weapons from previous games and Fallout Shelter.
 -------------------------------------------------------------------------------------------------------
-## Robot, Vertibird and Turret Weapon Tweaks
+## Robot, Vertibird and Turret Tweaks
 - Turrets have been updated to use more ammo types and damage values for all mechanical characters' weapons have been boosted.
--------------------------------------------------------------------------------------------------------
-## Robot, Vertibird, Deathclaw and Turret Armor Boost (optional)
 - The holotape/MCM includes settings to boost the damage resistance values of Mechanical enemies, Vertibirds, Deathclaws, and Power Armor. (compatible with everything, enabled by default).
 -------------------------------------------------------------------------------------------------------
-## Tweaked Settings
+## Help Menu Entries
+- Several entries have been added to the Help section in the Pause menu.
+-------------------------------------------------------------------------------------------------------
+## Edited Settings
 - Changes have been made to the following GameSettings if using the Full plugin or the optional Settings plugin:
 - descriptions are included in case you want to edit these.
 	- *fGunShellLifetime* : 60.0
@@ -138,22 +130,10 @@ A Fallout 4 Mod. Includes ammo switching, additional ammo types, a weapon condit
 		- There's probably more going on in the background.
 		- It doesn't seem to affect performance much, if at all, so I'm keeping it on :)
 -------------------------------------------------------------------------------------------------------
-## HUD Widget for Ammo Type and Condition (automatically enabled, can be toggled on/off)
-- Requires HUDFramework by registrator2000, I've been able to add a hud display.
-- This mod will automatically detect if HUDFramework is installed and switch from displaying things as messages to a condition bar/icon and a text display for Ammo Types if found.
-- Condition can be displayed as either a bar or an icon that changes color.
-- The bar is designed to fit with the style of the standard HUD.
--------------------------------------------------------------------------------------------------------
-## Help Menu Entries
-- Several entries have been added to the Help section in the Pause menu.
--------------------------------------------------------------------------------------------------------
-## Experimental Throwing Weapon Launcher
-- Something I'm testing that allows equipping and throwing mines/grenades like standard weapons.
-- **Not fully functional, just a proof of concept for now**
-- Craft the item named *Throw* at a Chemistry Workbench if you want to test it.
-- VATS targeting doesn't work properly. It's treated as a melee weapon, so don't try it if you haven't saved in a while...
--------------------------------------------------------------------------------------------------------
-- Mines and grenades can explode when damaged.
+## Optional Enhancements
+- The HUD widget for displaying ammo type and weapon condition requires HUDFramework by registrator2000 (link).
+	- AmmoTweaks can work without it, but I consider the widget essential.
+- Can be configured with MCM (link).
 -------------------------------------------------------------------------------------------------------
 
 
