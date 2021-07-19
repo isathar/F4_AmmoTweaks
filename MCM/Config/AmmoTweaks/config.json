@@ -1,0 +1,447 @@
+{
+	"minMcmVersion": 4,
+	"modName": "AmmoTweaks",
+	"displayName": "AmmoTweaks",
+	"pluginRequirements": ["AmmoTweaks_Core.esp"],
+	"content": [
+		{
+			"text": "<p align='center'><font size='30'>AmmoTweaks v1.1</font></p>",
+			"html": true,
+			"type": "text"
+		},
+		{
+			"type": "spacer",
+			"numLines": 1
+		},
+		
+		{
+			"text": "Keybinds",
+			"type": "section"
+		},
+		{
+			"id": "AT_SwapAmmo",
+			"text": "Swap Ammo",
+			"type": "hotkey",
+			"help": "Switches the equipped weapon to the next ammo type",
+			"valueOptions": {
+				"allowModifierKeys": true
+			}
+		},
+		{
+			"id": "AT_SwapAmmoAlt",
+			"text": "Swap Ammo Alternate",
+			"type": "hotkey",
+			"help": "For use on unique editor-placed weapons that the regular function won't work on",
+			"valueOptions": {
+				"allowModifierKeys": true
+			}
+		},
+		{
+			"type": "spacer",
+			"numLines": 1
+		},
+		
+		{
+			"text": "Weapon Options",
+			"type": "section"
+		},
+		{
+			"text": "    Weapon Condition",
+			"type": "switcher",
+			"valueOptions": {
+				"sourceType": "GlobalValue",
+				"sourceForm": "AmmoTweaks_Core.esp|2706"
+			}
+		},
+		{
+			"text": "    Weapon Restrictions",
+			"type": "switcher",
+			"valueOptions": {
+				"sourceType": "GlobalValue",
+				"sourceForm": "AmmoTweaks_Core.esp|2F15"
+			}
+		},
+		{
+			"text": "    Allow Weapon Breaking",
+			"type": "switcher",
+			"valueOptions": {
+				"sourceType": "GlobalValue",
+				"sourceForm": "AmmoTweaks_Core.esp|A4F5"
+			}
+		},
+		{
+			"type": "spacer",
+			"numLines": 1
+		},
+		
+		{
+			"text": "Armor Boosts",
+			"type": "section"
+		},
+		{
+			"text": "    Power Armor",
+			"type": "switcher",
+			"valueOptions": {
+				"sourceType": "GlobalValue",
+				"sourceForm": "AmmoTweaks_Core.esp|2F21"
+			}
+		},
+		{
+			"text": "    Deathclaws",
+			"type": "switcher",
+			"valueOptions": {
+				"sourceType": "GlobalValue",
+				"sourceForm": "AmmoTweaks_Core.esp|2C642"
+			}
+		},
+		{
+			"text": "    Robots",
+			"type": "switcher",
+			"valueOptions": {
+				"sourceType": "GlobalValue",
+				"sourceForm": "AmmoTweaks_Core.esp|2F20"
+			}
+		},
+		{
+			"text": "    Vertibirds",
+			"type": "switcher",
+			"valueOptions": {
+				"sourceType": "GlobalValue",
+				"sourceForm": "AmmoTweaks_Core.esp|2F22"
+			}
+		},
+		
+		{
+			"type": "spacer",
+			"numLines": 2
+		}
+		
+	],
+	"pages": [
+		{
+			"pageDisplayName": "Crafting",
+			"content": [
+				{
+					"type": "spacer",
+					"numLines": 1
+				},
+				{
+					"text": "Crafting",
+					"type": "section"
+				},
+				{
+					"text": "    Crafting XP Gain",
+					"help": "Only works for reloading benches",
+					"type": "dropdown",
+					"valueOptions": {
+						"options": ["Default", "Half XP Gain", "No XP Gain"],
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|37C5"
+					}
+				},
+				{
+					"text": "    Recipe Perk Requirements",
+					"help": "off: 0, on: 0.5 - I know, but it was this or duplicate recipes...",
+					"type": "slider",
+					"valueOptions": {
+						"min": 0.0,
+						"max": 0.5,
+						"step": 0.5,
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|5929"
+					}
+				},
+				{
+					"type": "spacer",
+					"numLines": 1
+				},
+				
+				{
+					"text": "Recipes",
+					"type": "section"
+				},
+				{
+					"text": "    .50 Caliber Ammo",
+					"type": "switcher",
+					"valueOptions": {
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|3EC2"
+					}
+				},
+				{
+					"text": "    Fusion Ammo",
+					"type": "switcher",
+					"valueOptions": {
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|659D"
+					}
+				},
+				{
+					"text": "    Alien Ammo",
+					"type": "switcher",
+					"valueOptions": {
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|6D76"
+					}
+				},
+				{
+					"text": "    Metals",
+					"type": "switcher",
+					"valueOptions": {
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|594F"
+					}
+				},
+				{
+					"text": "    Free Ammo Boxes",
+					"type": "switcher",
+					"valueOptions": {
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|5941"
+					}
+				},
+				{
+					"type": "spacer",
+					"numLines": 1
+				}
+			]
+		},
+		{
+			"pageDisplayName": "Loot Chances",
+			"content": [
+				{
+					"type": "spacer",
+					"numLines": 1
+				},
+				{
+					"text": "Configure the chances of the selected item types appearing in loot/vendor lists they're included in.",
+					"type": "text"
+				},
+				{
+					"text": "Due to the way loot chances work, these values are reversed. (100% == 0% and 0% == 100%) ",
+					"type": "text"
+				},
+				{
+					"type": "spacer",
+					"numLines": 1
+				},
+				
+				{
+					"text": "Ammo",
+					"type": "section"
+				},
+				{
+					"text": "    Very Common",
+					"type": "slider",
+					"valueOptions": {
+						"min": 0,
+						"max": 100,
+						"step": 1,
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|77C1"
+					}
+				},
+				{
+					"text": "    Common",
+					"type": "slider",
+					"valueOptions": {
+						"min": 0,
+						"max": 100,
+						"step": 1,
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|77C2"
+					}
+				},
+				{
+					"text": "    Uncommon",
+					"type": "slider",
+					"valueOptions": {
+						"min": 0,
+						"max": 100,
+						"step": 1,
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|77C3"
+					}
+				},
+				{
+					"text": "    Rare",
+					"type": "slider",
+					"valueOptions": {
+						"min": 0,
+						"max": 100,
+						"step": 1,
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|77C4"
+					}
+				},
+				{
+					"text": "    Very Rare",
+					"type": "slider",
+					"valueOptions": {
+						"min": 0,
+						"max": 100,
+						"step": 1,
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|77C5"
+					}
+				},
+				{
+					"type": "spacer",
+					"numLines": 1
+				},
+				
+				{
+					"text": "Ammo Boxes",
+					"type": "section"
+				},
+				{
+					"text": "    Common",
+					"type": "slider",
+					"valueOptions": {
+						"min": 0,
+						"max": 100,
+						"step": 1,
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|4827"
+					}
+				},
+				{
+					"text": "    Rare",
+					"type": "slider",
+					"valueOptions": {
+						"min": 0,
+						"max": 100,
+						"step": 1,
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|790B"
+					}
+				},
+				{
+					"text": "    Very Rare",
+					"type": "slider",
+					"valueOptions": {
+						"min": 0,
+						"max": 100,
+						"step": 1,
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|790C"
+					}
+				},
+				{
+					"type": "spacer",
+					"numLines": 1
+				},
+				
+				{
+					"text": "Crafting Item Shipments",
+					"type": "section"
+				},
+				{
+					"text": "    Common",
+					"type": "slider",
+					"valueOptions": {
+						"min": 0,
+						"max": 100,
+						"step": 1,
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|790D"
+					}
+				},
+				{
+					"text": "    Rare",
+					"type": "slider",
+					"valueOptions": {
+						"min": 0,
+						"max": 100,
+						"step": 1,
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|790E"
+					}
+				},
+				{
+					"text": "    Very Rare",
+					"type": "slider",
+					"valueOptions": {
+						"min": 0,
+						"max": 100,
+						"step": 1,
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|790F"
+					}
+				},
+				
+				{
+					"type": "spacer",
+					"numLines": 2
+				}
+			]
+		},
+		{
+			"pageDisplayName": "HUD Widget",
+			"content": [
+				{
+					"text": "Requires HudFramework",
+					"type": "text"
+				},
+				{
+					"type": "spacer",
+					"numLines": 1
+				},
+				
+				{
+					"text": "    Enable HUD Widget",
+					"type": "switcher",
+					"valueOptions": {
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|2543D"
+					}
+				},
+				{
+					"text": "    Show Ammo Type",
+					"type": "switcher",
+					"valueOptions": {
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|2543F"
+					}
+				},
+				{
+					"text": "    Show Condition",
+					"type": "switcher",
+					"valueOptions": {
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|2543E"
+					}
+				},
+				{
+					"text": "    Widget Refresh Time (s)",
+					"type": "slider",
+					"valueOptions": {
+						"min": 1.0,
+						"max": 10.0,
+						"step": 1.0,
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|25BDB"
+					}
+				},
+				{
+					"text": "    Time to Hide Widget (s)",
+					"help": "-1 to always show",
+					"type": "slider",
+					"valueOptions": {
+						"min": -1.0,
+						"max": 30.0,
+						"step": 1.0,
+						"sourceType": "GlobalValue",
+						"sourceForm": "AmmoTweaks_Core.esp|25BDA"
+					}
+				},
+				
+				{
+					"type": "spacer",
+					"numLines": 2
+				}
+			]
+		}
+		
+	]
+}

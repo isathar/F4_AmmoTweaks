@@ -1,0 +1,25 @@
+{
+	"modName": "AmmoTweaks",
+	"keybinds": [
+		{
+			"id": "AT_SwapAmmo",
+			"desc": "Swap Ammo",
+			"action": {
+				"type": "CallGlobalFunction",
+				"script": "AmmoTweaks:Globals",
+				"function": "AT_SwapAmmo",
+				"params": [false]
+			}
+		},
+		{
+			"id": "AT_SwapAmmoAlt",
+			"desc": "Swap Ammo Alternate",
+			"action": {
+				"type": "CallGlobalFunction",
+				"script": "AmmoTweaks:Globals",
+				"function": "AT_SwapAmmo",
+				"params": [true]
+			}
+		}
+	]
+}
