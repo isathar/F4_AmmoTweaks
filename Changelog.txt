@@ -1,0 +1,402 @@
+1.1:
+	- updated plugins with the current CK version
+	- removed old VIS compatibility patches
+	- removed modular plugins
+	- added MCM support, including hotkeys for ammo swapping
+	Core:
+	- renamed the core plugin to AmmoTweaks_Core.esp
+	- added a global function for external access to ammo swapping
+	Default Plugins:
+	- added support for weapon material swaps from CC to weapons that needed them
+
+1.081:
+	- added plugins I forgot to add in the previous version (whoops)
+
+1.072:
+	- fixed ammo type display for 5mm and 7mm linked belts
+
+1.071:
+	- fixed weapon repairs not sticking
+
+1.07:
+	- slightly more user-friendly mod installation through NMM.
+	- removed the option to install loose files - extract the ba2 if you need them
+	
+	Additions:
+	- optional HUD widget for ammo type and condition (requires HUDFramework by registrator2000)
+	- added the option to remove weapons from inventory when they break
+	- changed the way initialization works to handle new game starts a bit better (including Alternate Start mods)
+	
+	Fixes:
+	- melee weapons now only get damaged when hitting NPCs (still working on a reliable method for other targets)
+	- renamed the Config holotape to '[Settings] AmmoTweaks' to match community standards
+	- fixed edge case of the currently equipped weapon not being synced with its ref in the manager quest
+	- made the mechanism for updating to new versions more reliable
+	- reorganized config holotape menus
+	- updated the mod setup messages to show where they're coming from ('update this mod's...' was kind of vague)
+	- fusion core ammo items can no longer explode when shot.
+	- modular install: moved explosion changes to AmmoTweaks_DestrMinesGrenades.esp
+	
+	Balance:
+	- added increased limb damage to HP, SP, LFN and Barbed ammo variations
+	- increased bleeding damage for SP ammo
+	- increased the value of Dynamite (25) and Throwing Knives (5)
+	- set the value of Rocks to 0
+
+1.06:
+	Additions:
+	- added an alternate Swap Ammo item ([Swap Ammo Alt]) that can be used to swap ammo on unique weapons that don't work with the default method
+	- added casing and spent cell shipments
+	- added new ammo variation: Missile (Hive) (replaces seeking missiles)
+	- leveled list and formlist additions by updates are now handled by a version checking script/quest
+
+	Fixes:
+	- added the missing 9x19mm recipes
+	- fixed Scrap Pulse Grenade recipe text
+	- fixed the bad menu transforms for Dynamite
+	- removed the broken seeking missile
+	- added caliber and condition to follower weapon naming rules
+	- mod manager install script text fix for modular install description
+	- rearranged menus in the nmm install script to make more sense
+	- removed scrounger list overrides from plugins - handled by update script now
+	- added version number to plugin descriptions for LOOT
+
+	Balance:
+	- moved the ammo swapping item recipes to Chemistry Stations to make them easier to obtain when starting a new game
+	- increased the amount of powder required to make pistol, rifle, and high grade powder
+	- slightly increased the chance of recovering primers when dismantling ammo
+
+	Visual:
+	- updated bounds for ballistic projectiles after the offset fix in 1.05
+	- more visual tweaks to ballistic weapon muzzle flashes
+	- made muzzle flash meshes smaller for pistols
+	- slightly increased intensity of fake lighting effect
+	- added new turret muzzle flashes
+	- added fake lighting effect to laser weapon and gauss rifle muzzle flashes
+	- added a smaller variation of laser muzzle flashes
+
+1.05:
+	- fixed ballistic projectile offset
+	- VATS projectiles now move at the same speed as standard ones by default
+	- added an optional plugin for slower projectiles
+	- added fake lighting to ballistic weapon muzzle flashes
+	- removed non-working flickering shader animation from projectiles
+	- made ballistic projectiles smaller
+	- added shotgun pellet projectile
+	- added changes for the Lever Action rifle and Radium Rifle back to the full plugin
+
+1.04:
+	- fixed text for the Scrap Molotov Cocktail recipe
+	- Nuka-Nuke launcher ammo variation mods now use the proper mesh
+	- explosions for molotov cocktails and incendiary launcher projectiles now do less base damage and burn for 15 seconds
+	- fixed the truncated weapon condition help menu
+	- updated some of the other help menus with more information
+
+1.03:
+	- fixed the install script... it didn't include the melee weapon plugins in the modular install prompts
+	- minor text fix for the naming rules message box that pops up when installing
+
+1.02:
+	- Added the ability to switch between melee attack types (based on Fallout 1, 2)
+	- Power armor, vertibird and robot armor tweaks now also apply to melee weapons.
+	- Weapons now automatically reset their condition (mod) when equipped by the player if weapon condition is toggled off.
+	- Added more options for DLC leveled list distribution that show during installation
+	- Removed testing leveled list additions (that I forgot to remove before release) from the install script
+	- Added more information to the in-game help files.
+	- Created separate plugins for melee weapons (if using the modular version)
+
+1.01:
+	- hotfix for annoyingly redundant condition messages (left over from testing)
+
+1.00:
+	- Rebuilt from scratch, too many changes to list.
+
+0.99a:
+	- fixed crafting requirements toggle
+	- added Wasteland Workshop patch to the main file + installer
+	- added an example plugin to show how to add custom ammo types
+
+0.99:
+	- rebuilt to use esm master file and separate plugins for crafting (main) and weapon changes
+	- added mod version detection to automate some of the update process in future releases
+	- overhauled leveled lists again - closer to default this time, greatly simplified
+	- removed more keywords
+	- optional AWKCR and Valdacil's Item Sorting compatibility
+	
+	Weapons:
+	- overhauled the way ammo types work - now linked to default mods instead of weapon forms
+	- changed penetration values for lower caliber weapons from previous version
+	- made caliber penetration tweaks optional
+	- New weapon: 9mm Pistol (retextured Deliverer with different stats)
+	- performance optimizations to Swap Ammo script
+	- removed energy cells
+	
+	Crafting:
+	- removed crafting levels - too many issues
+	- the crafting system has been replaced by standard crafting menus for now
+	- optional - removed standard XP gain from all crafting/cooking recipes
+	- added standard perk requirements back for now
+	- fixed output of several recipes that were producing the wrong items
+	- turned the recharger into a standard workbench for energy ammo
+	- removed recharger's stored fuel
+	- moved explosives recipes based on type (ballistic/energy)
+	- grenades and mines can now be dismantled
+	- renamed RecipeMisc "UTILITY" [KYWD:0006980B] to "CRAFT"
+
+0.95a:
+	- fixed ejected shell casing sounds for .357 and .32 ammo
+	- weapons using 9mm, .32 and .357 ammo should now eject the proper shell casings
+	- updated shell casing models for crafting items
+	- added a Null caliber mod for each ballistic weapon that allows swapping between ammo sybtypes without changes to the weapon's stats
+	- added compatibility plugins for Full Weapon Rebalance and Weapon Balance Overhaul
+	- updated other compatibility plugins with the new changes
+
+0.93a:
+	- workbenches can now be built in interior settlements
+	- fixed shotgun shells recipe visibility in the light version
+
+0.93:
+	- updated ammo and weapons records for the new 1.4 patch
+	- recompiled scripts for 1.4 patch
+	- removed unneeded ammo records from the light version
+
+0.92a:
+	- quick install script fix for DEF_INV configuration file
+
+0.92:
+	- Added compatibility plugins to the main file
+	
+	Ammo Types:
+	- removed caliber kits, switched ammo type conversion to weapons workbench (added 1 ap_ keyword)
+	- overhauled ammo conversion mods to have different stats for each gun
+	- made lower caliber ammo mods slightly more effective
+	- added more stat changes to different caliber mods that were missing them to standardize things
+	- all ballistic rounds now become slightly less effective when exceeding max range
+	- npcs (including followers) can now switch ammo subtypes for the cryolator and broadsider
+	- fixed flamers not switching ammo subtypes
+	- reverted laser color schemes for energy cells + fusion cells to default (red = laser, blue = institute, muskets can have both)
+	- added green laser beam for institute version of fusion breeder ammo
+	- NPC ammo switching should not be affected by TimeScale anymore (they now have a chance to switch ammo subtypes every 10-30 seconds while in combat)
+	- fixed shotgun shell leveled lists to spawn the right ammo types with shotguns
+	
+	Crafting:
+	- removed old ammosmith's workstation (settler-assigned) objects - redundant, too buggy
+	- added special ballistic ammo types to the list of rounds that can be disassembled (finally)
+	- added descriptions to the workshop menu for workbenches/structures added by this mod
+	
+	Light version:
+	- changes to the way config menus + their scripts handle the light version
+	- removed all unneeded leveled items, weapon mods, both category keywords
+
+0.91:
+	- fixed the install script to install the light version properly
+	- fixed incorrect recipe components displayed for animal fat from molerat hide
+	- added recipe: animal fat from brahmin hide
+	- fixed material swap for high explosive crystals component
+	- made 40mm grenade projectiles destructible
+	- updated the destructible settings for other new ammo that I had forgotten about
+	- updated custom naming rules to include .44 revolver rifles from other mods
+	- range + gravity tweaks for 40mm grenades
+	- Light version: removed some unused options from the Recharger and Config menus
+
+0.90:
+	- basic options menu using message boxes
+	
+	Weapons:
+	- added ammo type variations and the ability to swap between them
+	- ammo types use a naming scheme close to New Vegas' - (AmmoName, subtype)
+	- new base ammo types: 9mm, .32, .357, MIRV, Breeder, 10 gauge shotgun shells, 40mm grenades
+	- 2 additional variations per base type (AP, HP, etc.)
+	- added a chance to recover ejected shell casings when firing weapons (influenced by Luck + Agility, customizable)
+	- NPCs can switch between ammo types they spawn with in combat, (optional)
+	- changed the way caliber conversions are handled to separate weapon modifications
+	- the new caliber mods are added with Caliber Conversion Kits crafted at munitions workbenches to require less keywords
+	- by default, weapons are limited to ammo conversions that make sense (can be toggled)
+	- each caliber + subtype has its own base values for armor penetration, damage, range, and speeds
+	- tweaked projectile speeds + impact forces for ballistic weapons roughly based on real values
+	- impact force changes have an effect on the amount of weapon debris from the recent game update
+	- changed Flamer damage type to dtFire instead of dtEnergy
+	- added Dynamite, Tin Grenade, MFC Grenade
+	- changed shotgun projectiles to show pellets in VATS mode
+	- changed default ammo that used copies of the same projectiles to use new projecile types
+	- Small Energy Cells are called Energy Cells now
+	
+	Crafting:
+	- complete overhaul of the included crafting system
+	- scripted crafting xp system with 4 levels each in Ballistic, Chemical, Energy
+	- only one crafting bench with several modes to pick from (less keywords)
+	- multi-output recipes are now handled through a menu messagebox
+	- optimized recipe names with dummy items
+	- readded alien blaster recipes (can be disabled)
+	- fusion-based recipes can now be disabled
+	- new components: Zinc, Brass, Bullet Metals, Animal Fat, High Explosive Powder
+	- component names updated to match new ammo name style (more like New Vegas)
+	- removed shavings components - pointless with the new system
+	- simplified component + recharging recipes
+	- Multi-Fuel Recharger and Recycling Workbench systems
+	
+	Leveled Lists:
+	- Scavenge items, mines, grenades can now be injected to leveled lists via the menu
+	- overhauled ammo loot lists
+	- removed 20Ga and SEC variations of shotguns + lasers from leveled lists - these are now ammo conversion mods
+	- removed shell casings from leveled lists, handled by a script now
+	- removed changes to scavenge + scrounger leveled lists, also handled by scripts now
+	- since only 1 alien blaster spawn exists, only default alien blaster rounds can be looted
+	- all chances can be customized in the config menu
+	- maximum chance setting = 400% vanilla ammo now (for ai ammo use tweak users)
+
+0.85e:
+	fixed several references for conditions in crafting recipes
+	lowered the fire rate of double barreled 20 ga shotguns
+
+0.85d:
+	fixed the ridiculously high fire rate on 20 Ga Combat Shotguns
+
+0.85c:
+	fix for high caliber primers component having the wrong scrap item, causing it to add 25 for each on used to workshops
+	added partially drained fusion cores to vendor and loot lists
+
+0.85b:
+	fixed global variables for spawn rates not saving. they were constants...
+
+0.85a:
+	hotfix for missing plasma and fusion learning recipes
+	added back drained fusion cell and core crafting
+
+0.85:
+	- removed the weapons plugin since old overrides that were the reason for it are no longer there
+	- added basic recipe learning (using crafted 'schematics' books + added perks)
+	- learning replaces the perk requirements, and can be toggled with the same no perks cheat command
+	- added back primer boxes and gunpowder/blasting powder bottles as shipment-style items
+	- added a new settler workstation (Ammosmith's Station) that works like a planter for shell casings
+	- removed fusion cells requirement from gamma cells recipe
+	- lowered fusion cell/small energy cell requirements for mine recipes
+	- added weapon mods for new laser weapons
+	- new old/worn tier of reveiver, grip and barrel for laser weapons (only institute laser receiver is retextured for now)
+	- added texture changes for new lasers back by using weapon mods with material swaps
+	- changed the way new weapons are named to custom instance naming rules
+	- removed unnecessary scripts from knockdown spell
+	- changed stats for 20Ga shotguns as per suggestions (less damage, higher range, faster firing + reload speed)
+	- lowered the chances of custom loading screens
+	- fixed the z-offset of leading screen workbenches, now they're too small...
+	- LeveledLists: added a few more overrides for vendor/loot lists I missed before
+	- LeveledLists: unlinked shell casing chance from ammo chance
+	- LeveledLists: fixed some enemies spawning without ammo for their weapons (npcs need at least 1 round to be able to fire)
+
+0.71:
+	- fixed wrong component reference for single primers
+	- removed boxes of primers from leveled lists and crafting recipes since they weren't working as intended
+	- added loading screens with hints
+	- changed all recipes with the Nuclear Physicist 3 requirement to use the second level of the perk
+	- (Weapons plugin) moved 20 Ga. shells 100x bulk reload recipe to the right menu
+
+0.61:
+	- quick fix for shell casing recycling recipes to use components instead of misc items
+
+0.54:
+	- changed installer options to make the weapon tweaks part clearer
+	- removed the option of no break down recipes since they are safely done in FO4Edit now
+	- fixed the name of old shotgun casings in the Full version
+	- moved the molotov cocktail recipe back to the Chemistry Lab
+	- removed Material Swap null references in gunpowder and primer objects
+
+0.53:
+	- combat shotguns should now eject the proper shell casing on fire
+
+0.52:
+	- added 10x ammo breakdown recipes
+
+0.51:
+	- changed perk requirements for workbenches from community leader 2
+
+0.8:
+	Core + Crafting:
+	- reorganized mod data, hopefully for the last time for a while (as in, you'll definitely need a clean save)
+	- simplified installation
+	- energy cell recharging overhauled
+	- new components: plasma fluid, cooled blue fluid
+	- plasma fluid is used for plasma cartridge + gamma cell recharging
+	- cooled blue fluid is used for cryo cell recharging
+	- makeshift batteries can be crafted + are used to charge fusion cells (with nuclear material)
+	- lowered perk requirements for recharging energy cells
+	- no perk requirements cheat can now be toggled via a global variable, removed extra plugin
+	- moved replacements for grenade/mine recipes to Weapons plugin
+	- moved 2mm Electromagntic cartridge recipes to recycling bench (10x and 100x recipes only due to cartridge)
+	- modified workbench meshes to have more clutter, retextured (color adjusted) for easier identification
+	- converted workbench meshes to statics for loadscreens
+	- default explosives recipe changes moved to the Weapons plugin
+	
+	Weapons:
+	- plasma fluid is used for plasma mines + grenades
+	- cooled blue fluid is used for cryo mines + grenades
+	- removed ammo + weapon renaming for better compatibility
+	- added new throwing weapons: Rock, Throwing Knife, Baseball, Wrench, Throwing Harpoon
+	- added Napalm Mines, Napalm Molotov (improved molotov cocktail)
+	- Flamer Fuel recipe tweaked for less components, now outputs 10 as intended (also added a x100 recipe)
+	- some explosives now require Fusion/Microfusion Cells or Plasma Cartridges as a power source instead of nuclear material
+	- added compatibility plugin for Simple Bug Fixes (scrounger perk loot list)
+	- added new weapons: 20 Ga. shotguns + SEC Lasers - no visual difference from default versions for now
+	- Institute laser no longer has new fusion cell texture until weapon mods are safe to edit
+	- SEC Lasers have electrical damage + critical effect
+	- makeshift batteries are used to charge small energy cells
+	
+	LeveledLists:
+	- overhauled the way ammo rarity is handled, separate rarity plugins no longer needed
+	- added customizable global variables for ammo rarity
+	- added new throwing weapons to grenade/molotov leveled lists
+	- added new weapon variations to weapon leveled lists
+	- added rarity settings + shell casings to Scrounger perk's leveled lists
+	- added shell casings + some drained energy cells to the workshops' scavenged item lists
+
+0.7:
+	Main plugin:
+	- fixed names of primer boxes to match primer names from v0.6
+	- new components: sulfur, charcoal, saltpeter, aluminum shavings, plastic shavings, blasting powder
+	- gunpowder is now crafted from new ingredients
+	- explosives now require blasting powder and required lead/steel/aluminum components are replaced by shavings
+	- changed perk requirements for nuka grenades
+	- primers are created at the explosives workbench again
+	- added 100x bulk reload and break down recipes
+	- shotgun shells now require plastic shavings
+	- fixed + balanced xp amounts for crafting new items/ammo (explosives + energy recharging still need work)
+	- reorganized + reworded crafting categories
+	- moved flamer fuel recipe to the chemistry lab
+	- replaced redundant copies of meshes used for retextures with material swaps
+	- reorganized asset folders
+	
+	Weapons Plugin:
+	- same changes/additions to crafting as main plugin
+	
+	LeveledLists plugin:
+	- primers, gunpowder and blasting powder are now distributed to vendor lists
+	- added drained cells to Gamma Gun ammo list
+	- found and modified 4 more vendor leveled lists
+	- added global variables to allow customization of new item spawn rates
+
+0.6:
+	- moved weapon tweaks to separate plugin to make things more modular
+	- remade small energy cell diffuse texture at 1024x1024 (compared to 2048^2 vanilla fusion cell and 512^2 previous version)
+	- hacked together some meshes for new workbenches to be able to differentiate between them (placeholders until full custom models are supported)
+	- added recycling workbench to unclutter menus
+	- shell casings can be broken down into steel shavings
+	- moved railway spikes and shell casings to recycling workbench
+	- recipe optimizations:
+	- added lead and steel shavings to use smaller amounts of lead/steel in ammo crafting
+	- one primer required per bullet
+	- Bottlecap Mines now actually require bottlecaps to make
+	- raised gunpowder amounts for explosives
+	- lowered the nuclear physicst requirement on gamma rounds to level 1
+	- Disassembled shotgun shells no longer have the 12 Ga. identifier if not using WeaponTweaks
+	- (WeaponTweaks) added mesh replacement for institute laser receivers to use small energy cell texture/material
+	- the color fits a bit better with the weapon's color scheme in my opinion
+	- (LeveledLists_Full) fixed wrong 20 Ga. ammo leveled item in vendor lists
+	- (LeveledLists_both) changed shell casing chance per bullet and drained fusion core in vendor lists to 25% as intended (was 50%)
+
+0.5?:
+	- added optional armor boost for Deathclaws when using ballistic or melee weapons (enabled by default)
+	- fixed HUD widget positioning while in power armor
+	- added attack type name (swing) to unarmed weapons
+	- added separate attack type mods for Boxing Gloves and Far Harbor's Meathook
+	- added some checks for HUD widgets to make sure they don't do stuff without HUDFramework
+	- another fix to the updating system (update check was only happening once on install)
+
