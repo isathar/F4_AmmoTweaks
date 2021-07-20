@@ -9,7 +9,7 @@ Also available on ModDB: https://www.moddb.com/mods/ammotweaks
 -------------------------------------------------------------------------------------------------------
 
 ## Warnings
-- This mod will be replaced by WeaponTweaks (no link yet) when it's ready and will not be receiving any more major updates.
+- This mod will be replaced by TweaksFramework (https://github.com/isathar/F4_TweaksFramework - no code uploaded yet, just a checklist in the Projects tab) when it's ready and will not be receiving any more major updates.
 - As of release 1.1, the master file is an esp to make it easier to upload it to Bethesda.net.
 	- This means you'll need to remove any previous versions before installing this one.
 - This mod uses a lot of scripts.
